@@ -28,7 +28,9 @@
 			}
 			var diamondId = GetURLParameter('diamondid')
 			var diamondSurl = GetURLParameter('surl')
-			$(".divSM").attr('data-name',diamondId).Vision360({ surl: diamondSurl, width: 500, height: 500, autoPlay: 0, antiClockRotation: 0 });
+			var size = GetURLParameter('height')
+			$("body").css('display','flex')
+			$(".divSM").css('margin', '0 auto').attr('data-name',diamondId).Vision360({ surl: diamondSurl, width: size, height: size, autoPlay: 0, antiClockRotation: 0 });
 			
 		});
 	</script>
